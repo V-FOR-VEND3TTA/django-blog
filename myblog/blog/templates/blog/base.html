@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
     <title>{% block title %}My Blog{% endblock %}</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
-<body>
-    <header>
+<body> 
+    <header class="bg-primary text-white p-3">
         <!-- Header content -->
+        <div class="container">
+            <h1>My Blog</h1>
+        </div>
     </header>
     <main>
-        <div class="container">
+        <div class="container mt-3">
             {% block content %}
             <!-- Specific page content -->
+            
+
             {% endblock %}
         </div>
     </main>
-    <footer>
+    <footer class="bg-dark text-white p-3">
         <!-- Footer content -->
+        <div class="container">
+            <p>&copy; {{ year }} My Blog</p>
+        </div>
     </footer>
+    
+    <!-- Include Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

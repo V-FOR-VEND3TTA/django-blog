@@ -1,6 +1,7 @@
 {% extends 'blog/base.html' %}
 
 {% block body %}
+
 <div>
     <form method="post" action="{% url 'logout' %}">
         {% csrf_token %}
